@@ -1,0 +1,15 @@
+[Unit]
+Description=NGINX Podman Container
+After=network.target
+
+[Service]
+Type=forking
+TimeoutStartSec=15
+User=xiaodong
+ExecStart=/usr/bin/podman start "nginx"
+ExecStop=-/usr/bin/podman stop "nginx"
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
