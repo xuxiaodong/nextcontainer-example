@@ -6,5 +6,5 @@ sudo yum -y install curl && sudo curl -o /etc/yum.repos.d/vbatts-shadow-utils-ne
 sudo yum -y install shadow-utils46-newxidmap slirp4netns
 
 # 设置 sysctl
-sudo cp userns_for_centos.conf /etc/sysctl.d/
+sudo cp userns_for_centos.conf /etc/sysctl.d/userns.conf
 sudo sysctl -p /etc/sysctl.d/userns.conf
